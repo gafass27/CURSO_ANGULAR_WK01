@@ -17,6 +17,11 @@ export class ListaDestinosComponent implements OnInit {
   ngOnInit(){
   }
 
+  elegido(element: DestinoViajeModel  ){
+    this.destinos.forEach(function (x) {x.setSelected(false); });
+    element.setSelected(true);
+  }
+
   guardar(nombre:string , url:string) :boolean{
     this.destinos.push(new DestinoViajeModel(nombre,url));
     console.log(this.destinos);

@@ -1,10 +1,15 @@
 export class DestinoViajeModel{
-  nombre: string;
-  imageurl: string;
-
-  constructor(n:string , u:string) {
-    this.nombre = n;
-    this.imageurl = u;
+  private selected: boolean;
+  servicios: string[];
+  constructor(public nombre:string ,public url:string) {
+    this.selected = false;
+    this.servicios = ['piscina','desayuno','almuerzo'];
   }
 
+  isSelected() :boolean{
+      return this.selected;
+  }
+  setSelected(s: boolean){
+    this.selected = s;
+  }
 }
