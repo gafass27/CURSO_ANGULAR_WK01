@@ -1,5 +1,7 @@
 import {Component, OnInit, Input, HostBinding, EventEmitter, Output} from '@angular/core';
 import {DestinoViajeModel} from "../models/destino-viaje-model";
+import {Store} from "@ngrx/store";
+import {AppState} from "../app.module";
 
 @Component({
   selector: 'app-destino-viaje',
@@ -12,7 +14,7 @@ export class DestinoViajeComponent implements OnInit {
     @Input("idx") posicion: number;
     @HostBinding('attr.class') ccsClass ='col-md-4';
     @Output() clicked: EventEmitter<DestinoViajeModel>;
-  constructor() {
+  constructor(private store: Store<AppState>) {
     this.destino = new DestinoViajeModel("","");
     this.clicked = new EventEmitter<DestinoViajeModel>();
     this.posicion = 0;
@@ -22,6 +24,10 @@ export class DestinoViajeComponent implements OnInit {
     return false;
   }
 
+  voteUp(){
+    this.store
+    return false;
+  }
   ngOnInit() {
   }
 

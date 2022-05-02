@@ -2,7 +2,8 @@ export class DestinoViajeModel{
   private selected: boolean;
   servicios: string[];
   id: any;
-  constructor(public nombre:string ,public url:string) {
+
+  constructor(public nombre:string ,public url:string, public votes: number = 0) {
     this.selected = false;
     this.servicios = ['piscina','desayuno','almuerzo'];
   }
@@ -12,5 +13,11 @@ export class DestinoViajeModel{
   }
   setSelected(s: boolean){
     this.selected = s;
+  }
+  voteUp(): any (){
+    this.votes++;
+  }
+  voteDown(): any (){
+    this.votes--;
   }
 }
