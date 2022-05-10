@@ -13,6 +13,10 @@ import {ActionReducerMap} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
 import { LoginComponent } from './components/login/login/login.component';
 import { ProtedtedComponent } from './components/protected/protedted/protedted.component';
+import { VuelosComponentComponent } from './components/vuelos/vuelos-component/vuelos-component.component';
+import { VuelosMainComponentComponent } from './components/vuelos/vuelos-main-component/vuelos-main-component.component';
+import { VuelosMasInfoComponentComponent } from './components/vuelos/vuelos-mas-info-component/vuelos-mas-info-component.component';
+import { VuelosDetalleComponentComponent } from './components/vuelos/vuelos-detalle-component/vuelos-detalle-component.component';
 
 
 
@@ -165,7 +169,11 @@ const reducersInitialState = {
     FormDestinoViajeComponent,
     NgRxStoreModule,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    VuelosComponentComponent,
+    VuelosMainComponentComponent,
+    VuelosMasInfoComponentComponent,
+    VuelosDetalleComponentComponent
   ],
   imports: [
     BrowserModule,
