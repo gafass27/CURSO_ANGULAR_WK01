@@ -11,6 +11,8 @@ import { FormDestinoViajeComponent } from './components/form-destino-viaje/form-
 import {DestinosApiClientModel} from "./models/destinos-api-client.model";
 import {ActionReducerMap} from "@ngrx/store";
 import {EffectsModule} from "@ngrx/effects";
+import { LoginComponent } from './components/login/login/login.component';
+import { ProtedtedComponent } from './components/protected/protedted/protedted.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,8 @@ let reducersInitalState = {
     ListaDestinosComponent,
     DestinoDetalleComponent,
     FormDestinoViajeComponent,
+    LoginComponent,
+    ProtedtedComponent,
 
   ],
   imports: [
